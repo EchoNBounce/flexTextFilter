@@ -1,0 +1,23 @@
+{
+  "visual": {
+    "name": "flexTextFilter",
+    "displayName": "flexTextFilter",
+    "guid": "flexTextFilterAB2F8754FB5347E883B2F0610D9DC45F",
+    "visualClassName": "Visual",
+    "version": "0.1.0",
+    "description": "A customisable text filter visual for Power BI, heavily inspired by Microsoft's Text Filter visual.",
+    "supportUrl": "https://github.com/EchoNBounce/flexTextFilter",
+    "gitHubUrl": "https://github.com/EchoNBounce/flexTextFilter"
+  },
+  "apiVersion": "2.6.0",
+  "author": {
+    "name": "Kit Huckvale",
+    "email": "echo.n.bounce@outlook.com"
+  },
+  "assets": { "icon": "assets/icon.png" },
+  "externalJS": null,
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": []
+}

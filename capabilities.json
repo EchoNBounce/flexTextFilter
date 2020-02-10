@@ -1,0 +1,170 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Field",
+      "name": "field",
+      "kind": "Grouping"
+    }
+  ],
+  "objects": {
+    "general": {
+      "displayName": "General",
+      "properties": {
+        "filter": {
+          "type": {
+            "filter": true
+          }
+        },
+        "searchText": {
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "layout": {
+      "displayName": "Layout",
+      "properties": {
+        "showSearchButton": {
+          "displayName": "Show search button",
+          "description": "Show search button",
+          "type": {
+            "bool": true
+          }
+        },
+        "showClearButton": {
+          "displayName": "Show clear button",
+          "description": "Show clear button",
+          "type": {
+            "bool": true
+          }
+        },
+        "placeholder": {
+          "displayName": "Placeholder",
+          "description": "Text to be displayed when there is nothing in the search box.",
+          "type": {
+            "text": true
+          }
+        },
+        "suggestions": {
+          "displayName": "Suggestions",
+          "description": "Comma-separated list of suggestions to show alongside any placeholder.",
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "formatting": {
+      "displayName": "Formatting",
+      "properties": {
+        "searchBoxTextColour": {
+          "displayName": "Search box text",
+          "description": "The text color of the search box.",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "searchBoxTextSize": {
+          "displayName": "Search box font size",
+          "description": "The font size of the search box.",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        },
+        "searchBoxBackgroundColour": {
+          "displayName": "Search box background",
+          "description": "The fill colour of the search box.",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "searchBoxBorderColour": {
+          "displayName": "Search box border",
+          "description": "The border colour of the search box.",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "searchBoxBorderThickness": {
+          "displayName": "Search box border thickness",
+          "description": "The border thickness of the search box.",
+          "type": {
+            "numeric": true
+          }
+        },
+        "searchButtonBackgroundColour": {
+          "displayName": "Search button colour",
+          "description": "Background colour applied to search button.",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "buttonIconColour": {
+          "displayName": "Button icon colour",
+          "description": "Colour applied to button icons.",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        } 
+      }
+    },
+    "behaviour": {
+      "displayName": "Behaviour",
+      "properties": {
+        "enableLiveSearch": {
+          "displayName": "Live search",
+          "description": "Automatically search once the user stops typing, after a brief delay.",
+          "type": {
+            "bool": true
+          }
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "field": {
+            "max": 1
+          }
+        }
+      ],
+      "categorical": {
+        "categories": {
+          "for": {
+            "in": "field"
+          },
+          "dataReductionAlgorithm": {
+            "top": {
+              "count": 30000
+            }
+          }
+        }
+      }
+    }
+  ]
+}
